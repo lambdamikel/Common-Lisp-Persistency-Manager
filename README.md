@@ -109,8 +109,8 @@ own libraries, even for something as fundamental like a Python
 such a functionality didn't exist! 
 
 I started writing complex Common Lisp applications in 1994. For my
-first complex Common Lisp CLIM application (the graphical editor
-["GenEd"](https://www.michael-wessel.info/gened.html) I still had to
+first complex Common Lisp CLIM application [(the graphical editor
+"GenEd")](https://www.michael-wessel.info/gened.html) I still had to
 write a large number of serializers / deserializers by hand.  Given
 the large number of CLOS classes for its graphical objects, this was a
 tedious endeavor and not enjoyable. I already knew about the MOP
@@ -129,7 +129,10 @@ write `defpersistentclass`. I figured out how to deal with cyclic
 references, and to my surprise, it worked out surprisingly well.  I
 could even store [whole city maps of a few hundred
 KBs](https://www.michael-wessel.info/visco/40.gif) with my persistency
-manager! 
+manager! So, for the accompanying program of my dipoma thesis [(the
+Visual Spatial Query Lanaguage
+"VISCO")](https://www.michael-wessel.info/visco.html) I was already
+using this software.
 
 Later on, my colleague (and later boss) Ralf Möller extended the
 persistency manager support for more data structures, e.g.,
@@ -139,7 +142,7 @@ became [RacerPro, which is available on GitHub as OpenSource as
 well](https://github.com/ha-mo-we/Racer).  RacerPro's
 [racer-persistence.lisp persistency
 package](https://github.com/ha-mo-we/Racer/blob/master/source/racer-persistence.lisp)
-is this extended version. 
+is this extended version.
 
 Since 1998, I have used this little small software pacakge for every
 Common Lisp / CLIM application that I wrote. You can also find it in

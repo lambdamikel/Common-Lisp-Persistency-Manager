@@ -146,8 +146,7 @@ is this extended version.
 
 Since 1998, I have used this little small software pacakge for every
 Common Lisp / CLIM application that I wrote. You can also find it in
-my (Tangram
-Solver)[https://github.com/lambdamikel/Common-Lisp-Tangram-Solver]
+my [Tangram Solver](https://github.com/lambdamikel/Common-Lisp-Tangram-Solver)
 where it implements the save & load functionality.
 
 The persistency maanger has successfully been used with LispWorks,

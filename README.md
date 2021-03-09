@@ -165,15 +165,14 @@ Common Lisp Meeting in my home town, Hamburg, in April 2006. I could
 have given that talk 10 years earlier, but missed the opportunity -
 too bad ;-)
 
-For RacerPro, starting in 2005, we have used this sofware for out
+For RacerPro, starting in 2005, we have used this sofware for our
 license checker. Before becoming OpenSource, RacerPro was commercial,
-until 2013. The `.lic` license file format was actually a
-serialization produced by this persistency manager, but we obscured it
-by using an higher-base number format for the encoding (I believe we
-used the entire alphabet, so it was a base-26 encoding or something
-like that!). No customer ever managed to crack or alter this license
-scheme. It was just a serialized (but rather complex) 
-`defpersistenclass license` object that was read in from the license
-file, detailing the properties and permissions of the license
-(e.g., unlocked features and expiriation date, etc.) 
-
+until 2013, and required a software license for proper operation that
+needed to be purchased from Racer Systems.  The `.lic` license file
+format was actually a serialized license class CLOS object, produced
+by this persistency manager.  The `defpersistentclass racer-license`
+object detailed the properties and permissions granted by the license
+(e.g., unlocked features, expiriation date, type of product, license
+owner, etc.) We obscured the serialization by using a
+higher-base number format (I believe it was a base-26 encoding). No
+customer ever managed to crack or temper with the licenses :-)

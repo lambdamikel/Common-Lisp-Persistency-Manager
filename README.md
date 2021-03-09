@@ -61,7 +61,7 @@ that have been defined with the macros `defpersistentclass` and
 
 For structures: 
 
-````
+```
 (defpersistentstruct stest 
                      (a)
                      (b))

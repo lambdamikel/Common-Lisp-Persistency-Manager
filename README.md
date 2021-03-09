@@ -145,7 +145,7 @@ well](https://github.com/ha-mo-we/Racer).  RacerPro's
 package](https://github.com/ha-mo-we/Racer/blob/master/source/racer-persistence.lisp)
 is this extended version.
 
-Since 1998, I have used this small software pacakge for every Common
+Since 1998, I have used this small software package for every Common
 Lisp / CLIM application that I wrote. You can also find it in my 
 [Tangram
 Solver](https://github.com/lambdamikel/Common-Lisp-Tangram-Solver)

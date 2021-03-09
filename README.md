@@ -3,13 +3,15 @@ A File-Based Fully Automatic Lisp Datastructure Serializer / Persistency Manager
 
 ## About
 
-Another piece of Common Lisp legacy software from my quarter century
-old Lisp archive :-) It still works flawlessly (tested with LispWorks
-6.1 on Ubuntu).
+Another piece of Common Lisp legacy software from my quarter
+century-old Lisp archive :-) It still works flawlessly in 2021 (tested
+with LispWorks 6.1 on Ubuntu).
 
-This package allows you to serialize / store arbitary Common Lisp
-datastructures to disc, without having to write a single line of code.
-See the file `tests.lisp` for examples.
+This software package allows you to serialize / "persist" arbitary
+Common Lisp datastructures to disc, and read them back, without having
+to write a single line of code, See the file `tests.lisp` for
+examples. It also supports CLOS classes and structures, hash tables, 
+arrays, vectors, symbolcs, numbers, lists, ...
 
 For example, simple Common Lisp datatypes can be serialized as
 follows:

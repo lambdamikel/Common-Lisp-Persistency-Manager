@@ -9,9 +9,8 @@ with LispWorks 6.1 on Ubuntu).
 
 This software package allows you to serialize / "persist" arbitary
 Common Lisp datastructures to disc, and read them back, without having
-to write a single line of code, See the file `tests.lisp` for
-examples. It also supports CLOS classes and structures, hash tables, 
-arrays, vectors, symbolcs, numbers, lists, ...
+to write a single line of code. It supports CLOS classes and
+structures, hash tables, arrays, vectors, symbolcs, numbers, lists, etc.
 
 For example, simple Common Lisp datatypes can be serialized as
 follows:

@@ -103,50 +103,74 @@ You will need a larger stack size (i.e., in the 500 KB range).
 
 There was a time in software development when you had to write your
 own libraries, even for something as fundamental like a Python
-`pickle` that many programmers take for granted nowadys.
-Well, in 1995, I had to write my own Common Lisp `pickle`. 
+`pickle` that many programmers take for granted nowadays.  Well, in
+1995, I had to write my own Common Lisp `pickle`, simply because
+such a functionality didn't exist! 
 
-I started writed complex Common Lisp applications in 1994. For my
-first complex CLIM Common Lisp Application (the graphical editor
-"GenEd"), in 1996, I had to write a lot of serializers (and
-deserializers) for CLOS objects by hand. I already knew about the
-Metaobject Protocol and an approach developed by a colleague, Heiko
-Kirschke, "PLOB" (Persistent Lisp Objects), but figured that this was
-a little bit too sophisticated for my applications (given that he even
-had a database backend and was using the not-so-well support
-Metaobject Protocol with CLOS in Allegro Common Lisp, which mad the
-approach not very portable).
+I started writing complex Common Lisp applications in 1994. For my
+first complex Common Lisp CLIM application (the graphical editor
+["GenEd"](https://www.michael-wessel.info/gened.html) I still had to
+write a large number of serializers / deserializers by hand.  Given
+the large number of CLOS classes for its graphical objects, this was a
+tedious endeavor and not enjoyable. I already knew about the MOP
+(Metaobject Protocol) and an approach developed by a university
+colleague, Heiko Kirschke, called "PLOB" (Persistent Lisp Objects),
+but figured that his solution to the problem was a little bit too
+sophisticated for me, given that he PLOB required a full-fledged
+relational database backend. Also, the use of the not-so-well
+supported and not standardized Metaobject Protocol made the approach
+not very portable. 
 
-So, I decided to create my own little persistency manager, for my
-diploma theses work that finished in 1998. My master thesis program
-`VISCO` already used this persistency manager.
+I hence decided to create my own little persistency manager, just good
+enough for my own purposes, to save me time. I knew enough about
+macros and garbage collection (and the object graph), so I was able to
+write `defpersistentclass`. I figured out how to deal with cyclic
+references, and to my surprise, it worked out surprisingly well.  I
+could even store [whole city maps of a few hundred
+KBs](https://www.michael-wessel.info/visco/40.gif) with my persistency
+manager! 
 
 Later on, my colleague (and later boss) Ralf Möller extended the
-approach to also allow for package serialization etc. The extended
-persistency manager was use in the Racer description logic reasoner,
-which later became (RacerPro)[https://github.com/ha-mo-we/Racer].  The
-(racer-persistence-lisp)[https://github.com/ha-mo-we/Racer/blob/master/source/racer-persistence.lisp]
-file is the extended version.
+persistency manager support for more data structures, e.g.,
+packages. This extended persistency manager was then used in the Racer
+description logic reasoner for its "persistency layer". Racer later
+became [RacerPro, which is available on GitHub as OpenSource as
+well](https://github.com/ha-mo-we/Racer).  RacerPro's
+[racer-persistence.lisp persistency
+package](https://github.com/ha-mo-we/Racer/blob/master/source/racer-persistence.lisp)
+is this extended version. 
 
-We have successfully used this with LispWorks, SBCL, Allegro and
-Common Lisp.
+Since 1998, I have used this little small software pacakge for every
+Common Lisp / CLIM application that I wrote. You can also find it in
+my (Tangram
+Solver)[https://github.com/lambdamikel/Common-Lisp-Tangram-Solver]
+where it implements the save & load functionality.
 
-Later, companies such as Franz Inc. were beginning to offer
-industrial-grade persistency packages, i.e., AllegroCache. However,
-none of this was available to me in 1996, and AllegroCache appeared
-much later. 
+The persistency maanger has successfully been used with LispWorks,
+SBCL, Allegro, MCL, and Common Lisp.
 
-Also, I remember (Nick Levine)[https://www.nicklevine.org/] gave a
-presentation about a very similar software package at the European
-Common Lisp Meeting in Hamburg 30, April 2006. I could have given 
-that talk 10 years earlier, but missed the opportunity ;-)  
+Later, companies such as Franz Inc. (makers of Allegro Common Lisp)
+were beginning to offer industrial-grade persistency packages, i.e.,
+"AllegroCache". However, none of this was available to me in 1996, and
+AllegroCache appeared much later. And honestly, I don't need it for
+what I am developing. Something simpler is doing equally well (if not
+better).
 
-For Racer, we then also used this serialization format for our
-product licenses! By changing the encoding to some higher-based
-number system (I believe we used the entire alphabet, so it was 
-a number system with base 26 or something like that!) we had a
-highly obscurred RacerPro license file. No customer ever managed
-to crack the scheme. In fact, it was just a serialized (but rather
-complex) `defpersistenclass license` object that was read from 
-the license file, detailing the properties of the license. 
+Also, I remember that [Nick Levine](https://www.nicklevine.org/) gave
+a presentation about a *very similar software package* at the European
+Common Lisp Meeting in my home town, Hamburg, in April 2006. I could
+have given that talk 10 years earlier, but missed the opportunity -
+too bad ;-)
+
+For RacerPro, starting in 2005, we have used this sofware for out
+license checker. Before becoming OpenSource, RacerPro was commercial,
+until 2013. The `.lic` license file format was actually a
+serialization produced by this persistency manager, but we obscured it
+by using an higher-base number format for the encoding (I believe we
+used the entire alphabet, so it was a base-26 encoding or something
+like that!). No customer ever managed to crack or alter this license
+scheme. It was just a serialized (but rather complex) 
+`defpersistenclass license` object that was read in from the license
+file, detailing the properties and permissions of the license
+(e.g., unlocked features and expiriation date, etc.) 
 

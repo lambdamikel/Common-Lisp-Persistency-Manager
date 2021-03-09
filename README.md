@@ -10,7 +10,8 @@ with LispWorks 6.1 on Ubuntu).
 This software package allows you to serialize / "persist" arbitary
 Common Lisp datastructures to disc, and read them back, without having
 to write a single line of code. It supports CLOS classes and
-structures, hash tables, arrays, vectors, symbolcs, numbers, lists, etc.
+structures, hash tables, arrays, vectors, symbols, numbers, lists,
+conses, etc.
 
 For example, simple Common Lisp datatypes can be serialized as
 follows:
@@ -161,9 +162,10 @@ better).
 
 Also, I remember that [Nick Levine](https://www.nicklevine.org/) gave
 a presentation about a *very similar software package* at the European
-Common Lisp Meeting in my home town, Hamburg, in April 2006. I could
-have given that talk 10 years earlier, but missed the opportunity -
-too bad ;-)
+Common Lisp Meeting in my home town, Hamburg, in April 2006. My
+software package preceeded his presentation by almost 10 years, 
+and I never gave a presentation about it. 
+
 
 For RacerPro, starting in 2005, we have used this sofware for our
 license checker. Before becoming OpenSource, RacerPro was commercial,

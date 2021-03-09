@@ -118,10 +118,10 @@ tedious endeavor and not enjoyable. I already knew about the MOP
 (Metaobject Protocol) and an approach developed by a university
 colleague, Heiko Kirschke, called "PLOB" (Persistent Lisp Objects),
 but figured that his solution to the problem was a little bit too
-sophisticated for me, given that he PLOB required a full-fledged
-relational database backend. Also, the use of the not-so-well
-supported and not standardized Metaobject Protocol made the approach
-not very portable. 
+sophisticated for my use cases (PLOB required a full-fledged
+relational database and used the not-so-well supported and not
+standardized Metaobject Protocol, which made the approach not very
+portable). 
 
 I hence decided to create my own little persistency manager, just good
 enough for my own purposes, to save me time. I knew enough about

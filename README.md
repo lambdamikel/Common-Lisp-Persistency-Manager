@@ -111,7 +111,7 @@ such a functionality didn't exist!
 
 I started writing complex Common Lisp applications in 1994. For my
 first complex Common Lisp CLIM application [(the graphical editor
-"GenEd")](https://www.michael-wessel.info/gened.html) I still had to
+"GenEd")](https://github.com/lambdamikel/GenEd) I still had to
 write a large number of serializers / deserializers by hand.  Given
 the large number of CLOS classes for its graphical objects, this was a
 tedious endeavor and not enjoyable. I already knew about the MOP

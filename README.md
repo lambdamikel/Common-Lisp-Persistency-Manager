@@ -134,17 +134,17 @@ such a functionality didn't exist!
 
 I started writing complex Common Lisp applications in 1994. For my
 first complex Common Lisp CLIM application [(the graphical editor
-"GenEd")](https://github.com/lambdamikel/GenEd) I still had to
-write a large number of serializers / deserializers by hand.  Given
-the large number of CLOS classes for its graphical objects, this was a
-tedious endeavor and not enjoyable. I already knew about the MOP
-(Metaobject Protocol) and an approach developed by a university
-colleague, Heiko Kirschke, called "PLOB" (Persistent Lisp Objects),
-but figured that his solution to the problem was a little bit too
-sophisticated for my use cases (PLOB required a full-fledged
-relational database and used the not-so-well supported and not
-standardized Metaobject Protocol, which made the approach not very
-portable). 
+"GenEd")](https://github.com/lambdamikel/GenEd) I still had to write a
+large number of serializers / deserializers by hand.  Given the large
+number of CLOS classes for its graphical objects, this was a tedious
+endeavor and not enjoyable. I already knew about the MOP (Metaobject
+Protocol) and an approach developed by a university colleague, Heiko
+Kirschke, called ["PLOB" (Persistent Lisp
+Objects)](http://plob.sourceforge.net/), but figured that his solution
+to the problem was a little bit too sophisticated for my use cases
+(PLOB required a full-fledged relational database and used the
+not-so-well supported and not standardized Metaobject Protocol, which
+made the approach not very portable).
 
 I hence decided to create my own little persistency manager, just good
 enough for my own purposes, to save me time. I knew enough about
@@ -184,11 +184,12 @@ AllegroCache appeared much later. And honestly, I don't need it for
 what I am developing. Something simpler is doing equally well (if not
 better).
 
-Also, I remember that [Nick Levine](https://www.nicklevine.org/) gave
-a presentation about a *very similar software package* at the European
-Common Lisp Meeting in my home town, Hamburg, in April 2006. My
-software package preceeded his presentation by almost 10 years, 
-and I never gave a presentation about it. 
+Also, I remember that [Arthur Lemmens gave a presentation about a
+*very similar software package* at the European Common Lisp Meeting in
+my home town, Hamburg, in April
+2006.](https://cl-pdx.com/static/persistence-lemmens.txt) My software
+package preceeded his presentation by almost 10 years, and I never
+gave a presentation about it.
 
 
 For RacerPro, starting in 2005, we have used this sofware for our

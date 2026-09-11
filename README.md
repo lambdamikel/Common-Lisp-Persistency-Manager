@@ -7,7 +7,7 @@ Another piece of Common Lisp legacy software from my quarter
 century-old Lisp archive :-) It still works flawlessly in 2021 (tested
 with LispWorks 6.1 on Ubuntu).
 
-This software package allows you to serialize / "persist" arbitary
+This software package allows you to serialize / "persist" arbitrary
 Common Lisp datastructures to disc, and read them back, without having
 to write a single line of code. It supports CLOS classes and
 structures, hash tables, arrays, vectors, symbols, numbers, lists,
@@ -158,7 +158,7 @@ Visual Spatial Query Lanaguage
 "VISCO")](https://www.michael-wessel.info/visco.html) I was already
 using this software.
 
-Later on, my colleague (and later boss) Ralf Möller extended the
+Later on, my colleague (and later boss) Ralf MÃ¶ller extended the
 persistency manager support for more data structures, e.g.,
 packages. This extended persistency manager was then used in the Racer
 description logic reasoner for its "persistency layer". Racer later
